@@ -163,7 +163,7 @@ class WoZaiXiaoYuanPuncher:
             notifyToken = os.environ["SCT_KEY"]
             url = "https://sctapi.ftqq.com/{}.send"
             body = {
-                "title": "⏰ 我在校园打卡结果通知",
+                "title": "⏰ CC的我在校园打卡结果通知",
                 "desp": "打卡项目：健康打卡\n\n打卡情况：{}\n\n打卡时间：{}".format(
                     notifyResult, notifyTime
                 ),
