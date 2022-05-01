@@ -226,7 +226,7 @@ class WoZaiXiaoYuanPuncher:
             data = {
                 "msgtype": "text",
                 "text": {
-                    "content": f"⏰ MIKUCHINCHANCC的我在校园打卡结果通知\n---------\n打卡项目：健康打卡\n\n打卡情况：{notifyResult}\n\n打卡时间: {notifyTime}"
+                    "content": f"⏰ MIKUCHINCHAN的我在校园打卡结果通知\n---------\n打卡项目：健康打卡\n\n打卡情况：{notifyResult}\n\n打卡时间: {notifyTime}"
                 },
             }
             r = requests.post(url=url, data=json.dumps(data), headers=headers, timeout=15).json()
@@ -238,7 +238,7 @@ class WoZaiXiaoYuanPuncher:
         if os.environ.get('BARK_TOKEN'):
             # bark 推送
             notifyToken = os.environ["BARK_TOKEN"]
-            req = "{}/{}/{}".format(notifyToken, "⏰ MIKUCHINCHANCC的我在校园打卡（健康打卡）结果通知", notifyResult)
+            req = "{}/{}/{}".format(notifyToken, "⏰ MIKUCHINCHAN的我在校园打卡（健康打卡）结果通知", notifyResult)
             requests.get(req)
             print("消息经bark推送成功")
         if os.environ.get("MIAO_CODE"):
